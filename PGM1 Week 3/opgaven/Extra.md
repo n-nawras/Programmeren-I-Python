@@ -20,11 +20,19 @@ Out:
         Bedenk dat je strings kan vermenigvuldigen!
         3 * "#" == "###"
 
-
 _Code:_
 ```
+def trap(x):
 
-
+    if x == 0:
+        return
+    
+    print(x * "#")
+    trap(x-1)
+    
+trap(3)
+print()
+trap(5)
 ```
 # Opdracht 2
 a. Schrijf de functie lines(x, space) die twee #-lijnen tekent van x regels hoog en space geeft aan hoeveel spaties tussen de lijnen liggen.
@@ -44,6 +52,17 @@ Out:
 
 _Code:_
 ```
+def lines (num1, num2):
+    
+    space = " " * num2
+    tek = "#" 
+    
+    for i in range(num1):
+        print(tek + space + tek)
+    
+lines(3, 3)
+print()
+lines(2, 5)
 
 ```
 
